@@ -1,0 +1,210 @@
+*{
+    font-family: 'Tektur', cursive;
+}
+#basic-calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#basic-calculator-background{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+}
+.function-keys-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.function-keys-area input:nth-child(n){
+    margin: 5px;
+    padding: 5px;
+    color: #fff;
+    position: relative;
+    display: grid;
+    width: 110px;
+    place-items: center;
+    margin: 8px;
+    height: 50px;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+      inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+      10px 20px 25px rgba(0, 0, 0, 0.4);
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+}
+.function-keys-area input:nth-child(n)::before{
+
+}
+#project-heading{
+    margin-left: auto;
+}
+#result-area{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#result-area input{
+    border: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    outline: none;
+    direction: rtl;
+    background-color: #a7af7c;
+    font-family: 'VT323', monospace;
+}
+
+#result-above{
+    font-size: 44px;
+}
+#numbers-operation-keys-area-actual{
+    display: flex;
+    flex-direction: row;
+}
+#numbers-keys-area-actual-inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#numbers-keys-area-actual-inner div:nth-child(n){
+    margin: 5px;
+    padding: 5px;
+    color: #fff;
+    position: relative;
+    display: grid;
+    width: 50px;
+    place-items: center;
+    margin: 8px;
+    height: 50px;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+      inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+      10px 20px 25px rgba(0, 0, 0, 0.4);
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+#numbers-keys-area-actual-inner div:nth-child(n) i{
+    position: relative;
+    font-style: normal;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#numbers-keys-area-actual-inner div:nth-child(n)::before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+}
+
+
+#operations-keys-area-actual-inner{
+    display: flex;
+    flex-direction: row;
+}
+#operations-1{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#operations-2{
+    display: grid;
+    grid-template-columns: 3fr;
+}
+#operations-1 div:nth-child(n){
+    margin: 5px;
+    padding: 5px;
+    color: #fff;
+    position: relative;
+    display: grid;
+    width: 50px;
+    place-items: center;
+    margin: 8px;
+    height: 50px;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+        inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+        10px 20px 25px rgba(0, 0, 0, 0.4);
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+}
+#operations-1 div:nth-child(n) i{
+    position: relative;
+    font-style: normal;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+#operations-1 div:nth-child(n)::before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+}
+#operations-2 div:nth-child(n){
+    margin: 5px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    display: grid;
+    width: 50px;
+    place-items: center;
+    margin: 8px;
+    height: 125px;
+    background: linear-gradient(90deg, #ff0000, #d44848);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+        inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+        10px 20px 25px rgba(0, 0, 0, 0.4);
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+}
+#operations-2 div:nth-child(n) i{
+    position: relative;
+    font-style: normal;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+#operations-2 div:nth-child(n)::before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #d20000,#fbbaba54);
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+}
