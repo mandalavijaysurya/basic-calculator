@@ -18,9 +18,16 @@
     color: white;
     border-radius: 40px;
 }
+#numbers-operation-keys-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .function-keys-area{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    
 }
 .function-keys-area input:nth-child(n){
     margin: 5px;
@@ -41,9 +48,7 @@
     font-weight: 400;
     border-radius: 10px;
 }
-.function-keys-area input:nth-child(n)::before{
 
-}
 #project-heading{
     margin-left: auto;
 }
@@ -53,29 +58,38 @@
     border: 2px solid black;
     border-radius: 10px;
 }
-#result-area input{
+#result-area span#result-above {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    color: black;
+    font-size: 44px;
+}
+#result-area span{
     border: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
     outline: none;
-    direction: rtl;
+    height: 20px;
+    width: inherit;
     background-color: #a7af7c;
     font-family: 'VT323', monospace;
 }
 
-#result-above{
-    font-size: 44px;
-}
+
 #numbers-operation-keys-area-actual{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 #numbers-keys-area-actual-inner{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-#numbers-keys-area-actual-inner div:nth-child(n){
+#numbers-keys-area-actual-inner input{
     margin: 5px;
     padding: 5px;
     color: #fff;
@@ -95,32 +109,11 @@
     border-radius: 10px;
 }
 
-#numbers-keys-area-actual-inner div:nth-child(n) i{
-    position: relative;
-    font-style: normal;
-    font-size: 1em;
-    text-transform: uppercase;
-}
-
-#numbers-keys-area-actual-inner div:nth-child(n)::before{
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 4px;
-    bottom: 14px;
-    right: 12px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
-    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
-    border-left: 1px solid #0004;
-    border-bottom: 1px solid #0004;
-    border-top: 1px solid #0009;
-}
-
-
 #operations-keys-area-actual-inner{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 #operations-1{
     display: grid;
@@ -130,7 +123,7 @@
     display: grid;
     grid-template-columns: 3fr;
 }
-#operations-1 div:nth-child(n){
+#operations-1 input{
     margin: 5px;
     padding: 5px;
     color: #fff;
@@ -149,27 +142,7 @@
     font-weight: 400;
     border-radius: 10px;
 }
-#operations-1 div:nth-child(n) i{
-    position: relative;
-    font-style: normal;
-    font-size: 1em;
-    text-transform: uppercase;
-}
-#operations-1 div:nth-child(n)::before{
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 4px;
-    bottom: 14px;
-    right: 12px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
-    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
-    border-left: 1px solid #0004;
-    border-bottom: 1px solid #0004;
-    border-top: 1px solid #0009;
-}
-#operations-2 div:nth-child(n){
+#operations-2 input{
     margin: 5px;
     padding: 5px;
     color: rgb(0, 0, 0);
@@ -178,7 +151,7 @@
     width: 50px;
     place-items: center;
     margin: 8px;
-    height: 125px;
+    height: 115px;
     background: linear-gradient(90deg, #ff0000, #d44848);
     box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
         inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
@@ -187,24 +160,4 @@
     cursor: pointer;
     font-weight: 400;
     border-radius: 10px;
-}
-#operations-2 div:nth-child(n) i{
-    position: relative;
-    font-style: normal;
-    font-size: 1em;
-    text-transform: uppercase;
-}
-#operations-2 div:nth-child(n)::before{
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 4px;
-    bottom: 14px;
-    right: 12px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #d20000,#fbbaba54);
-    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
-    border-left: 1px solid #0004;
-    border-bottom: 1px solid #0004;
-    border-top: 1px solid #0009;
 }

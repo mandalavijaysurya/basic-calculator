@@ -4,12 +4,17 @@
 	<meta charset="UTF-8">
 	<script></script>
 	<link rel="stylesheet" type="text/css" href="/CSS/Calculator.css">
+	<!-- Tektur Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@600&display=swap" rel="stylesheet">
+	<!-- VT323 Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+	<!-- Javascript files-->
+	<script src="/js/Calculator.js"></script>
 </head>
 <body>
 <div id="basic-calculator">
@@ -17,40 +22,42 @@
 		<h1 id="project-heading">Basic Calculator</h1>
 		<div id="actual-calculator">
 			<div id="result-area">
-				<input type="text" id="result-above">
-				<input type="text" id="result-below">
+				<span id="result-above"></span>
+				<span id="result-below"></span>
 			</div>
 			<div id="numbers-operation-keys-area">
-				<div id="function-keys-area" class="function-keys-area">
-					<input type="button" id="check-btn" value="Check">
-					<input type="button" id="partial-c-btn" value="C">
-					<input type="button" id="full-c-btn" value="AC">
-				</div>
+				<form action="">
+					<div id="function-keys-area" class="function-keys-area">
+						<!--<input type="button" id="check-btn" value="Check">-->
+						<input type="button" id="partial-c-btn" value="C" onclick="clearResult()">
+						<input type="submit" id="full-c-btn" value="AC">
+					</div>
+				</form>
 				<div id="numbers-operation-keys-area-actual">
 					<div id="numbers-keys-area-actual-inner">
-						<div id="numbers-9"><i>9</i></div>
-						<div id="numbers-8"><i>8</i></div>
-						<div id="numbers-7"><i>7</i></div>
-						<div id="numbers-6"><i>6</i></div>
-						<div id="numbers-5"><i>5</i></div>
-						<div id="numbers-4"><i>4</i></div>
-						<div id="numbers-3"><i>3</i></div>
-						<div id="numbers-2"><i>2</i></div>
-						<div id="numbers-1"><i>1</i></div>
-						<div id="numbers-0"><i>0</i></div>
-						<div id="numbers-."><i>.</i></div>
-						<div id="numbers-00"><i>00</i></div>
+						<input type="button" id="key-9" value="9" onclick="add9()">
+						<input type="button" id="key-8" value="8" onclick="add8()">
+						<input type="button" id="key-7" value="7" onclick="add7()">
+						<input type="button" id="key-6" value="6" onclick="add6()">
+						<input type="button" id="key-5" value="5" onclick="add5()">
+						<input type="button" id="key-4" value="4" onclick="add4()">
+						<input type="button" id="key-3" value="3" onclick="add3()">
+						<input type="button" id="key-2" value="2" onclick="add2()">
+						<input type="button" id="key-1" value="1" onclick="add1()">
+						<input type="button" id="key-0" value="0" onclick="add0()">
+						<input type="button" id="key-." value="." onclick="addDot()">
+						<input type="button" id="key-00" value="00" onclick="add00()">
 					</div>
 					<div id="operations-keys-area-actual-inner">
 						<div id="operations-1">
-							<div id="operation-/"><i>/</i></div>
-							<div id="operation-%"><i>%</i></div>
-							<div id="operation-*"><i>x</i></div>
-							<div id="operation--"><i>-</i></div>
+							<input type="button" id="key-operation-bs" value="del" onclick="deleteFunction()">
+							<input type="button" id="key-operation-/" value="/" onclick="divideFunction()">
+							<input type="button" id="key-operation-*" value="x" onclick="multiplyFunction()">
+							<input type="button" id="key-operation--" value="-" onclick="subtractFunction()">
 						</div>
 						<div id="operations-2">
-							<div id="operation-+"><i>+</i></div>
-							<div id="operation-="><i>=</i></div>
+							<input type="button" id="key-operation-+" value="+" onclick="additionFunction()">
+							<input type="button" id="key-operation-=" value="=">
 						</div>
 					</div>
 				</div>
