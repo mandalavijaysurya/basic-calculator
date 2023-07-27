@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class calculatorController {
 
-    @RequestMapping(value="/startpage", method = RequestMethod.GET)
+    @RequestMapping(value="/startPage", method = RequestMethod.GET)
     public String startPage(){
         return "Calculator";
     }
