@@ -131,3 +131,37 @@ function deleteFunction(){
 
 }
 
+function outputFunction() {
+    let resultAbove = document.getElementById('result-above');
+    let data = {
+        inputValue: resultAbove.innerText
+    };
+    if (isValidExpression(resultAbove)) {
+      // Perform the fetch API call to send the data to the backend
+      fetch('calculate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ expression: resultAbove })
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(resultAbove)
+        resultAbove.innerHTML = data;
+      })
+      .catch(error => {
+        // Handle any errors that occurred during the fetch API call
+        console.error('Error:', error);
+      });
+    } else {
+      // Value is not valid, handle the error or show a message to the user
+      console.error('Invalid expression:', resultAbove);
+    }
+  }
+
+  function isValidExpression(expression) {
+    return !isInvalidExpress
+  }
+
+
