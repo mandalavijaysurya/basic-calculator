@@ -126,7 +126,11 @@ function deleteFunction(){
     let result = document.getElementById('result-above')
     if(result.innerHTML.length !=0){
         result.innerHTML = result.innerHTML.substring(0,result.innerHTML.length-1)
-        isInvalidExpress = true
+        let lastChar = result.innerHTML.charAt(result.innerHTML.length-1)
+        if(lastChar == '+' || lastChar == '-' || lastChar == '*' || lastChar == '/' || lastChar == '.')
+            isInvalidExpress = true
+        else
+            isInvalidExpress = false
     }
 
 }
@@ -136,19 +140,20 @@ function outputFunction() {
     let data = {
         inputValue: resultAbove.innerText
     };
+    console.log(data)
     if (isValidExpression(resultAbove)) {
       // Perform the fetch API call to send the data to the backend
-      fetch('calculate', {
+      fetch('/calculate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ expression: resultAbove })
+        body: JSON.stringify({ expression: resultAbove.innerText })
       })
       .then(response => response.json())
       .then(data => {
-        console.log(resultAbove)
         resultAbove.innerHTML = data;
+        console.log(resultAbove)
       })
       .catch(error => {
         // Handle any errors that occurred during the fetch API call

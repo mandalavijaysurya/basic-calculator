@@ -26,7 +26,6 @@ public class calculatorController {
         eval.setExpression(reqBody.get("expression"));
         String response = eval.evaluate();
         System.out.println(response);
-
         return ResponseEntity.ok(response);
     }
     @RequestMapping(value = "/error", method = RequestMethod.GET)
